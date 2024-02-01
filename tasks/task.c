@@ -1,7 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-int main() {
-    int num1, num2;
+int main(int argc, char *argv[]) 
+{
+    if (argc != 3)
+    {
+        printf("Usage: ./task <num1> <num2>\n");
+        return 0;
+    }
+
+    int num1 = atoi(argv[1]);
+    int num2 = atoi(argv[2]);
 
     // Prompt the user for input
     printf("Enter the first number: ");
